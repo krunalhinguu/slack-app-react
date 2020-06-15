@@ -7,6 +7,7 @@ class UserPanel extends React.Component {
   state = {
     user: this.props.currentUser,
   };
+  g;
   /* 
   componentWillReceiveProps(nextProps) {
     this.setState({ user: nextProps.currentUser });
@@ -54,7 +55,7 @@ class UserPanel extends React.Component {
             <Dropdown
               trigger={
                 <span>
-                  <Image ssrc={user.photoURL} spaced="right" avatar />
+                  <Image src={user.photoURL} spaced="right" avatar />
                   {user.displayName}
                 </span>
               }

@@ -11,6 +11,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "./reducers";
 import { setUser, clearUser } from "./actions";
 import Spinner from "./Spinner";
+import "../src/components/App.css";
 
 /* Styles */
 import "semantic-ui-css/semantic.min.css";

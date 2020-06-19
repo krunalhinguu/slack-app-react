@@ -27,6 +27,13 @@ body,
 }
 
 
+/* SidePanel.js */
+
+.menu {
+    padding-bottom: 2em;
+}
+
+
 /* Message.js  */
 
 .message__self {

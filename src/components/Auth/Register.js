@@ -27,7 +27,6 @@ class Register extends Component {
     let error;
 
     if (this.isFormEmpty(this.state)) {
-      // throw error
       error = { message: "Fill in all the fields" };
       this.setState({ errors: errors.concat(error) });
       return false;
@@ -36,7 +35,6 @@ class Register extends Component {
       this.setState({ errors: errors.concat(error) });
       return false;
     } else {
-      // form valid
       return true;
     }
   };

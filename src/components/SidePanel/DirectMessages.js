@@ -59,7 +59,7 @@ class DirectMessages extends React.Component {
 
   addStatusToUser = (userId, connected = true) => {
     const updatedUsers = this.state.users.reduce((acc, user) => {
-      if (user.uid === userId) {
+      if (user.id === userId) {
         user["status"] = `${connected ? "online" : "offline"}`;
       }
       return acc.concat(user);
@@ -96,7 +96,6 @@ class DirectMessages extends React.Component {
 
   render() {
     const { users, activeChannel } = this.state;
-    console.log(activeChannel);
 
     return (
       <Menu.Menu className="menu">

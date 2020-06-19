@@ -176,7 +176,8 @@ class Channels extends React.Component {
 
     if (count > 0) return count;
   };
-  displayChannel = (channels) =>
+
+  displayChannels = (channels) =>
     channels.length > 0 &&
     channels.map((channel) => (
       <Menu.Item
@@ -213,7 +214,7 @@ class Channels extends React.Component {
             ({channels.length}){" "}
             <Icon name="add" onClick={this.openModal}></Icon>
           </Menu.Item>
-          {this.displayChannel(channels)}
+          {this.displayChannels(channels)}
         </Menu.Menu>
 
         {/* Add Channel Modal */}

@@ -9,6 +9,8 @@ class MessageHeader extends React.Component {
       handleSearchChange,
       searchLoading,
       isPrivateChannel,
+      isChannelStarred,
+      handleStar,
     } = this.props;
 
     return (
@@ -19,8 +21,9 @@ class MessageHeader extends React.Component {
             {channelName}
             {!isPrivateChannel && (
               <Icon
-                name={"star outline"}
-                color="black"
+                onClick={handleStar}
+                name={isChannelStarred ? "star" : "star outline"}
+                color={isChannelStarred ? "yellow" : "black"}
                 style={{ marginLeft: "2px" }}
               />
             )}

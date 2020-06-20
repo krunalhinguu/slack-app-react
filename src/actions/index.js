@@ -1,4 +1,5 @@
 import * as actionTypes from "./types";
+import { types } from "mime-types";
 
 /* USER ACTIONS */
 export const setUser = (user) => {
@@ -31,6 +32,17 @@ export const setPrivateChannel = (isPrivateChannel) => {
     type: actionTypes.SET_PRIVATE_CHANNEL,
     payload: {
       isPrivateChannel: isPrivateChannel,
+    },
+  };
+};
+
+export const setUserPosts = (userPosts) => {
+  console.log("actions", userPosts);
+
+  return {
+    type: actionTypes.SET_USER_POSTS,
+    payload: {
+      userPosts,
     },
   };
 };

@@ -69,7 +69,6 @@ class Register extends Component {
         .auth()
         .createUserWithEmailAndPassword(this.state.email, this.state.password)
         .then((createdUser) => {
-          console.log(createdUser);
           createdUser.user
             .updateProfile({
               displayName: this.state.username,

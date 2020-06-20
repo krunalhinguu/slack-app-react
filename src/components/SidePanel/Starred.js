@@ -1,8 +1,8 @@
 import React from "react";
-import firebase from "../../firebase";
 import { connect } from "react-redux";
+import { Icon, Menu } from "semantic-ui-react";
 import { setCurrentChannel, setPrivateChannel } from "../../actions/index";
-import { Menu, Icon } from "semantic-ui-react";
+import firebase from "../../firebase";
 
 class Starred extends React.Component {
   state = {
@@ -17,8 +17,6 @@ class Starred extends React.Component {
   }
 
   addListeners = (userId) => {
-    console.log("hello");
-
     /* add starred channels */
     this.state.usersRef
       .child(userId)

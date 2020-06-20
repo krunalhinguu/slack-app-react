@@ -125,7 +125,6 @@ class Channels extends React.Component {
       .child(key)
       .update(newChannel)
       .then(() => {
-        console.log("Channel Added");
         this.setState({ channelName: "", channelDetails: "" });
         this.closeModal();
       })

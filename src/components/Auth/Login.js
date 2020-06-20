@@ -34,7 +34,7 @@ class Login extends Component {
         .auth()
         .signInWithEmailAndPassword(this.state.email, this.state.password)
         .then((signInUser) => {
-          console.log(signInUser);
+          /*    console.log(signInUser); */
           this.setState({ isLoading: false });
         })
         .catch((err) => {

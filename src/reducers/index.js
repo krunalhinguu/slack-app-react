@@ -13,7 +13,14 @@ const initialChannelState = {
   userPosts: null,
 };
 
+const initialColorState = {
+  primaryColor: "#4c3c4c",
+  secondaryColor: "#eee",
+};
+
 /* REDUCERS */
+
+/* User Reducers */
 const user_reducer = (state = initialUserState, action) => {
   switch (action.type) {
     case actionTypes.SET_USER:
@@ -31,6 +38,7 @@ const user_reducer = (state = initialUserState, action) => {
   }
 };
 
+/* Channel Reducer */
 const channel_reducer = (state = initialChannelState, action) => {
   switch (action.type) {
     case actionTypes.SET_CURRENT_CHANNEL:
@@ -53,10 +61,25 @@ const channel_reducer = (state = initialChannelState, action) => {
   }
 };
 
+/* Color Reducer */
+const color_reducer = (state = { initialColorState }, action) => {
+  switch (action.type) {
+    case actionTypes.SET_COLORS:
+      return {
+        ...state,
+        primaryColor: action.payload.primaryColor,
+        secondaryColor: action.payload.secondaryColor,
+      };
+    default:
+      return state;
+  }
+};
+
 /* ROOT REDUCER */
 const rootReducer = combineReducers({
   user: user_reducer,
   channel: channel_reducer,
+  colors: color_reducer,
 });
 
 export default rootReducer;

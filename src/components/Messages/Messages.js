@@ -216,22 +216,21 @@ class Messages extends React.Component {
       : "";
   };
 
-  displayTypingUsers = (users) => {
+  displayTypingUsers = (users) =>
     users.length > 0 &&
-      users.map((user) => (
-        <div
-          key={user.id}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginBottom: "0.2em",
-          }}
-        >
-          <span className="user__typing">{user.name} is typing</span>
-          <Typing />
-        </div>
-      ));
-  };
+    users.map((user) => (
+      <div
+        key={user.id}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          marginBottom: "0.2em",
+        }}
+      >
+        <span className="user__typing">{user.name} is typing</span>
+        <Typing />
+      </div>
+    ));
 
   render() {
     const {
